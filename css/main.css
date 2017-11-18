@@ -1,0 +1,126 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+ *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+body {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.71429;
+    text-align: center;
+    margin-top: 180px;
+    font-family: monospace;
+    background-image: url(../assets/img/peru.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+header {
+   background-color: rgb(106,210,243);
+   color: white;
+   width: 100%;
+   position: fixed;
+   top:0;
+   z-index: 2000;
+   text-%align: center;
+  }
+
+  section.columna-1{
+    width: 42%;
+    margin-left: 5%;
+    float: left;
+    margin-bottom: 80px;
+    text-align: left;
+    padding: 2%;
+    background-color: white;
+  }
+
+  hr{
+    width: 90%;
+  }
+
+  .code{
+    color: rgb(86,118,137);
+  }
+
+  section.columna-2{
+    width: 42%;
+    margin-right: 5%;
+    float: right;
+    margin-bottom: 80px;
+    background-color: white;
+    height: 255px;
+  }
+.tweet{
+  margin-top: 15px;
+  width: 95%;
+  border: none;
+  font-size: 20px;
+}
+
+.button-tweet{
+  background-color: rgb(106,210,243);
+  border: none;
+  color: white;
+  padding: 2%;
+  display: inline-block;
+  margin-right: 470px;
+}
+
+.newsfeed{
+    clear: both;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.li {
+  text-align: left;
+  background-color: white;
+  padding: 8px;
+  width:85%;
+  margin-bottom: 0px;
+}
+
+div {
+  background-color: white;
+}
+
+ul{
+  background-color: white;
+}
+
+.moreThan{
+  color: red;
+}
+
+.time {
+  text-align: left;
+}
+
+.contenido {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.correct {
+  color: rgb(44, 46, 201);
+  font-weight:1em;
+}
+.incorrect {
+  color: red;
+}
+
+
+
+
