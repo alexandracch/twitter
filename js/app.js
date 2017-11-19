@@ -4,16 +4,17 @@ var lista = document.getElementById('newsfeed-tweets');
 var textArea = document.getElementById('textArea');
 var date = moment().format('LT'); 
 var caracteresTweet = document.getElementById('caracteres');
-var valueTextArea = textArea.value;
 
 textArea.addEventListener('keyup', function(event) {
   caracteresTweet.textContent = (140 - textArea.value.length);
-    
-  if (textArea.value.length < 140) {
-    boton.disabled = !boton.disabled;
+
+  if (textArea.value.length === 0 ||textArea.value ===' ') {
+    boton.disabled = true;
+  } else if (textArea.value.length < 140) {
+    boton.disabled = false;
     caracteresTweet.classList.add('correct');
   } else {
-    boton.disabled = true;
+    boton.disabled = true; 
     caracteresTweet.classList.add('incorrect');
     textArea.classList.add('incorrect');
   }

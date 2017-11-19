@@ -72,8 +72,14 @@ header {
   border: none;
   color: white;
   padding: 2%;
-  display: inline-block;
-  margin-right: 470px;
+  float: left;
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
+#caracteres {
+  float: right;
+  margin-right: 35px;
 }
 
 .newsfeed{
