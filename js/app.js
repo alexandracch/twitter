@@ -1,3 +1,4 @@
+// variables
 var area = document.getElementById('tweet-space');
 var boton = document.getElementById('twittear');
 var lista = document.getElementById('newsfeed-tweets');
@@ -5,10 +6,11 @@ var textArea = document.getElementById('textArea');
 var date = moment().format('LT'); 
 var caracteresTweet = document.getElementById('caracteres');
 
+// boton habilitado/desabilitado y contador
 textArea.addEventListener('keyup', function(event) {
   caracteresTweet.textContent = (140 - textArea.value.length);
 
-  if (textArea.value.length === 0 ||textArea.value ===' ') {
+  if (textArea.value.length === 0 || textArea.value ===' ') {
     boton.disabled = true;
   } else if (textArea.value.length < 140) {
     boton.disabled = false;
@@ -19,7 +21,7 @@ textArea.addEventListener('keyup', function(event) {
     textArea.classList.add('incorrect');
   }
 });
-
+// evento de "twittear"
 boton.addEventListener('click', function(event) {
   if (textArea.value) { 
     var li = document.createElement('li');
@@ -31,10 +33,9 @@ boton.addEventListener('click', function(event) {
     lista.appendChild(tweet);
     textArea.value = ' ';
 
-}
+  }
 });
-
-//date
+// date
 boton.addEventListener('click', function(event) {
   var li = document.createElement('li');
   var textOftheTime = document.createElement('div');
