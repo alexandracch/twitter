@@ -15,6 +15,12 @@ textArea.addEventListener('keyup', function(event) {
   } else if (textArea.value.length < 140) {
     boton.disabled = false;
     caracteresTweet.classList.add('correct');
+  } else if (textArea.value.length === 120) {
+    boton.disabled = false;
+    caracteresTweet.classList.add('cientoveinte')
+  } else if (textArea.value.length === 130) {
+    boton.disabled = false;
+    caracteresTweet.classList.add('cientotreinta');
   } else {
     boton.disabled = true; 
     caracteresTweet.classList.add('incorrect');
@@ -45,3 +51,4 @@ boton.addEventListener('click', function(event) {
   li.appendChild(textOftheTime);
   lista.appendChild(textOftheTime);
 });
+
