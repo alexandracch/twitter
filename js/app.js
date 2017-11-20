@@ -28,30 +28,28 @@ window.addEventListener('load', function(event) {
       caracteresTweet.classList.add('incorrect'); // agrega color rojo
     }
   });
-// evento de "twittear"
-boton.addEventListener('click', function(event) {
-  if (textArea.value) { 
+  // evento de "twittear"
+  boton.addEventListener('click', function(event) {
+    if (textArea.value) { 
+      var li = document.createElement('li');
+      var tweet = document.createElement('p');
+    
+      tweet.textContent = textArea.value;
+      tweet.classList.add('li'); 
+      li.appendChild(tweet);
+      lista.appendChild(tweet);
+      textArea.value = ' '; // para que textarea aparezca nuevamente en lbanco
+    }
+  });
+
+  // Hora
+  boton.addEventListener('click', function(event) {
     var li = document.createElement('li');
-    var tweet = document.createElement('p');
+    var textOftheTime = document.createElement('div');
     
-    tweet.textContent = textArea.value;
-    tweet.classList.add('li'); 
-    li.appendChild(tweet);
-    lista.appendChild(tweet);
-    textArea.value = ' '; // para que textarea aparezca nuevamente en lbanco
-
-}
-});
-
-// Hora
-boton.addEventListener('click', function(event) {
-  var li = document.createElement('li');
-  var textOftheTime = document.createElement('div');
-    
-  textOftheTime.textContent = date;
-  textOftheTime.classList.add('time');
-  li.appendChild(textOftheTime);
-  lista.appendChild(textOftheTime);
-});
-
+    textOftheTime.textContent = date;
+    textOftheTime.classList.add('time');
+    li.appendChild(textOftheTime);
+    lista.appendChild(textOftheTime);
+  });
 });
