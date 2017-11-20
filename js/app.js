@@ -10,21 +10,20 @@ var caracteresTweet = document.getElementById('caracteres');
 textArea.addEventListener('keyup', function(event) {
   caracteresTweet.textContent = (140 - textArea.value.length);
 
-  if (textArea.value.length === 0 || textArea.value ===' ') {
-    boton.disabled = true;
-  } else if (textArea.value.length < 140) {
-    boton.disabled = false;
-    caracteresTweet.classList.add('correct');
-  } else if (textArea.value.length === 120) {
-    boton.disabled = false;
-    caracteresTweet.classList.add('cientoveinte')
-  } else if (textArea.value.length === 130) {
-    boton.disabled = false;
-    caracteresTweet.classList.add('cientotreinta');
+  if (textArea.value.length === 0 || textArea.value === ' ') {
+    boton.disabled = true; // desabilita el boton
+  } else if (textArea.value.length >= 1 && textArea.value.length < 120) {
+    boton.disabled = false; // habilita el boton
+    caracteresTweet.classList.add('correct'); // agrega color azul
+  } else if (textArea.value.length >= 120 && textArea.value.length < 130) {
+    boton.disabled = false; // habilita el boton
+    caracteresTweet.classList.add('color1');  // agrega color verde
+  } else if (textArea.value.length >= 130 && textArea.value.length < 140) {
+    boton.disabled = false; // habilita el boton
+    caracteresTweet.classList.add('color2'); // agrega color fuxia
   } else {
-    boton.disabled = true; 
-    caracteresTweet.classList.add('incorrect');
-    textArea.classList.add('incorrect');
+    boton.disabled = true; // desabilita el boton
+    caracteresTweet.classList.add('incorrect'); // agrega color rojo
   }
 });
 // evento de "twittear"
@@ -37,11 +36,12 @@ boton.addEventListener('click', function(event) {
     tweet.classList.add('li'); 
     li.appendChild(tweet);
     lista.appendChild(tweet);
-    textArea.value = ' ';
+    textArea.value = ' '; // para que textare aparezca nuevamente en lbanco
 
-  }
+}
 });
-// date
+
+// Hora
 boton.addEventListener('click', function(event) {
   var li = document.createElement('li');
   var textOftheTime = document.createElement('div');
@@ -51,4 +51,3 @@ boton.addEventListener('click', function(event) {
   li.appendChild(textOftheTime);
   lista.appendChild(textOftheTime);
 });
-
