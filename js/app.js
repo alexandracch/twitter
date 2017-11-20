@@ -6,26 +6,28 @@ var textArea = document.getElementById('textArea');
 var date = moment().format('LT'); 
 var caracteresTweet = document.getElementById('caracteres');
 
-// boton habilitado/desabilitado y contador
-textArea.addEventListener('keyup', function(event) {
-  caracteresTweet.textContent = (140 - textArea.value.length);
+// función general
+window.addEventListener('load', function(event) {
+  // boton habilitado/desabilitado y contador
+  textArea.addEventListener('keyup', function(event) {
+    caracteresTweet.textContent = (140 - textArea.value.length);
 
-  if (textArea.value.length === 0 || textArea.value === ' ') {
-    boton.disabled = true; // desabilita el boton
-  } else if (textArea.value.length >= 1 && textArea.value.length < 120) {
-    boton.disabled = false; // habilita el boton
-    caracteresTweet.classList.add('correct'); // agrega color azul
-  } else if (textArea.value.length >= 120 && textArea.value.length < 130) {
-    boton.disabled = false; // habilita el boton
-    caracteresTweet.classList.add('color1');  // agrega color verde
-  } else if (textArea.value.length >= 130 && textArea.value.length < 140) {
-    boton.disabled = false; // habilita el boton
-    caracteresTweet.classList.add('color2'); // agrega color fuxia
-  } else {
-    boton.disabled = true; // desabilita el boton
-    caracteresTweet.classList.add('incorrect'); // agrega color rojo
-  }
-});
+    if (textArea.value.length === 0 || textArea.value === ' ') {
+      boton.disabled = true; // desabilita el boton
+    } else if (textArea.value.length >= 1 && textArea.value.length < 120) {
+      boton.disabled = false; // habilita el boton
+      caracteresTweet.classList.add('correct'); // agrega color azul
+    } else if (textArea.value.length >= 120 && textArea.value.length < 130) {
+      boton.disabled = false; // habilita el boton
+      caracteresTweet.classList.add('color1');  // agrega color verde
+    } else if (textArea.value.length >= 130 && textArea.value.length < 140) {
+      boton.disabled = false; // habilita el boton
+      caracteresTweet.classList.add('color2'); // agrega color fuxia
+    } else {
+      boton.disabled = true; // desabilita el boton
+      caracteresTweet.classList.add('incorrect'); // agrega color rojo
+    }
+  });
 // evento de "twittear"
 boton.addEventListener('click', function(event) {
   if (textArea.value) { 
@@ -50,4 +52,6 @@ boton.addEventListener('click', function(event) {
   textOftheTime.classList.add('time');
   li.appendChild(textOftheTime);
   lista.appendChild(textOftheTime);
+});
+
 });
