@@ -36,7 +36,7 @@ boton.addEventListener('click', function(event) {
     tweet.classList.add('li'); 
     li.appendChild(tweet);
     lista.appendChild(tweet);
-    textArea.value = ' '; // para que textare aparezca nuevamente en lbanco
+    textArea.value = ' '; // para que textarea aparezca nuevamente en lbanco
 
 }
 });
